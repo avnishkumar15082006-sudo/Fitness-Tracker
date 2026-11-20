@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #1e293b;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+header {
+  max-width: 850px;
+  margin: 0 auto 24px;
+  text-align: center;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+header p {
+  color: #cbd5e1;
+  margin-top: 6px;
+}
+
+main {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* 1. Summary Cards Grid */
+#summary-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  font-size: 15px;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#steps-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #16a34a;
+  transition: width 0.3s ease;
+}
+
+#calories-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #ea580c;
+  transition: width 0.3s ease;
+}
+
+/* 2. Form & History Sections */
+#form-section,
+#history-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-bottom: 24px;
+}
+
+#form-section h2,
+#history-section h2 {
+  margin-bottom: 14px;
+  font-size: 18px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+form button {
+  grid-column: span 2;
+}
+
+#reset-btn {
+  background-color: #dc2626;
+  margin-bottom: 12px;
+  padding: 7px 12px;
+  font-size: 13px;
+}
+
+#reset-btn:hover {
+  background-color: #b91c1c;
+}
+
+#activity-list {
+  list-style: none;
+}
+
+#activity-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background-color: #64748b;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.delete-btn:hover {
+  background-color: #475569;
+}
+
+/* Mobile Responsive */
+@media (max-width: 650px) {
+  #summary-section,
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  form button {
+    grid-column: span 1;
+  }
+}
